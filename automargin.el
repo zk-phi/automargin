@@ -47,13 +47,20 @@
 
 ;; * main
 
+(defun automargin--window-width (&optional window)
+  (let ((margins (window-margins window))
+        (width (window-width window)))
+    (+ width
+       (or (car margins) 0)
+       (or (cdr margins) 0))))
+
 (defun automargin-function ()
   (let* ((automargin-margin
           (/ (- (frame-width) automargin-target-width) 2))
          (automargin-margin
           (if (< automargin-margin 0) 0 automargin-margin)))
     (dolist (window (window-list))
-      (let ((margin (if (= (frame-width) (my-window-width window))
+      (let ((margin (if (= (frame-width) (automargin--window-width window))
                         automargin-margin 0)))
         (set-window-margins window margin margin)))))
 
