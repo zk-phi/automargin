@@ -22,12 +22,12 @@
 
 ;;; Commentary:
 
-;; Require this script
+;; Require this script and enable automargin-mode.
 ;;
-;;   (require 'automargin)
+;;   (when (require 'automargin nil t)
+;;     (automargin-mode 1))
 ;;
-;; and when the frame is not splitted horizontally,
-;; margins are set automatically.
+;; then, if the frame is not splitted horizontally, margins are set automatically.
 
 ;;; Change Log:
 
@@ -47,6 +47,14 @@
 
 ;; * main
 
+(define-minor-mode automargin-mode
+  "automatically add margins to windows"
+  :init-value nil
+  :global t
+  (if automargin-mode
+      (add-hook 'window-configuration-change-hook 'automargin-function)
+    (remove-hook 'window-configuration-change-hook 'automargin-function)))
+
 (defun automargin--window-width (&optional window)
   (let ((margins (window-margins window))
         (width (window-width window)))
@@ -63,8 +71,6 @@
       (let ((margin (if (= (frame-width) (automargin--window-width window))
                         automargin-margin 0)))
         (set-window-margins window margin margin)))))
-
-(add-hook 'window-configuration-change-hook 'automargin-function)
 
 ;; * provide
 
