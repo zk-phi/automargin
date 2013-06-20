@@ -18,7 +18,7 @@
 
 ;; Author: zk_phi
 ;; URL: http://hins11.yu-yake.com/
-;; Version: 0.0.1
+;; Version: 0.0.2
 
 ;;; Commentary:
 
@@ -32,6 +32,7 @@
 ;;; Change Log:
 
 ;; 0.0.1 test release
+;; 0.0.2 added minor-mode
 
 ;;; Code:
 
