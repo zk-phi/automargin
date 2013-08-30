@@ -1,4 +1,4 @@
-;;; automargin.el --- automatically add margins to windows
+;;; automargin.el --- add margins automatically to windows
 
 ;; Copyright (C) 2013 zk_phi
 
@@ -35,6 +35,10 @@
 ;; 0.0.2 added minor-mode
 
 ;;; Code:
+
+;; * constants
+
+(defconst automargin-version "0.0.2")
 
 ;; * custom
 

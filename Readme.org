@@ -1,0 +1,15 @@
+* automargin
+
+ウィンドウに自動的にマージンを追加
+
+add margins automatically to windows
+
+** Usage
+
+Require this script
+
+: (require 'automargin)
+
+and activate automargin-mode with "M-x automargin-mode" or
+
+: (automargin-mode 1)
