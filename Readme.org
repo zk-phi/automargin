@@ -3,6 +3,10 @@
 add margins to windows not-splitted, and center them
 分割されていないウィンドウに自動的にマージンを追加
 
+** Screencast
+
+[[screencast.gif]]
+
 ** Usage
 
 Require this script
