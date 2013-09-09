@@ -1,4 +1,4 @@
-;;; automargin.el --- add margins automatically to windows
+;;; automargin.el --- add margins to windows not-splitted, and center them
 
 ;; Copyright (C) 2013 zk_phi
 

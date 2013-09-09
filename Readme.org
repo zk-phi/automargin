@@ -1,8 +1,7 @@
 * automargin
 
-ウィンドウに自動的にマージンを追加
-
-add margins automatically to windows
+add margins to windows not-splitted, and center them
+分割されていないウィンドウに自動的にマージンを追加
 
 ** Usage
 
@@ -13,3 +12,11 @@ Require this script
 and activate automargin-mode with "M-x automargin-mode" or
 
 : (automargin-mode 1)
+
+** Customization
+
+You may customize the width of margined windows by setting variable
+"automargin-target-width".
+
+: (setq automargin-target-width 200)
+
