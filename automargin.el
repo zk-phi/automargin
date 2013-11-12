@@ -53,7 +53,6 @@
 
 ;; * main
 
-;;;###autoload
 (define-minor-mode automargin-mode
   "automatically add margins to windows"
   :init-value nil
