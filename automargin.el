@@ -59,7 +59,7 @@
   :global t
   (if automargin-mode
       (add-hook 'window-configuration-change-hook 'automargin-function)
-    (remove-hook 'window-configuration-change-hook 'automargin-function)))
+    (remove-hook 'window-configuration-change-hook 'function-automargin)))
 
 (defun automargin-function ()
   (let* ((automargin-margin
