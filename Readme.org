@@ -1,31 +1,3 @@
 * automargin
 
-add margins to windows not-splitted, and center them
-
-分割されていないウィンドウに自動的にマージンを追加
-
-** NOTE: AUTOMARGIN DEPENDS ON Emacs 24 FROM VERSION 0.0.2
-
-automargin now use built-in function "window-total-width". You may
-define the function manually to use in Emacs <=23.
-
-** Screencast
-
-[[screencast.gif]]
-
-** Usage
-
-Require this script
-
-: (require 'automargin)
-
-and activate automargin-mode with "M-x automargin-mode" or
-
-: (automargin-mode 1)
-
-** Customization
-
-You may customize the width of margined windows by setting variable
-"automargin-target-width".
-
-: (setq automargin-target-width 200)
+This project is now included in sublimity-attractive.el [[(https://github.com/zk-phi/sublimity]]).
